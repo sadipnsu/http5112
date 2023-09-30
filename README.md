@@ -1,5 +1,5 @@
-# http5113
-A repo to store files from HTTP5113
+# http5112
+A repo to store files from HTTP5112
 Repo description: This repo is to store files of my HTTP5113 class which I am doing for every Tuesday
 
 Instructions:
