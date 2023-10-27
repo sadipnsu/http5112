@@ -1,6 +1,6 @@
 # http5112
 A repo to store files from HTTP5112
-Repo description: This repo is to store files of my HTTP5113 class which I am doing for every Tuesday
+Repo description: This repo is to store files of my HTTP5112 class which I am doing for every Tuesday
 
 Instructions:
 1.Must have to follow the instrctions of the course instructor.
