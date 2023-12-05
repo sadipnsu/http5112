@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Order";
+}
+
+<h2>Order Some Candy Here!</h2>
+
+<form method = "POST" action="/Candy/Checkout">
+
+    <div>
+        <label>Name:</label>
+        <input type="text" name="OrderName"/>
+    </div>
+    <div>
+        <label>Candy Size</label>
+        <select name="CandySize">
+            <option value="S" >Small ($9.99)</option>
+            <option value="M">Medium ($13.99)</option>
+            <option value="L">Large ($15.99)</option>
+        </select>
+    </div>
+    <div>
+        <input type="submit" value="Order Now!" />
+    </div>
+
+</form>

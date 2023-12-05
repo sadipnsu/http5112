@@ -1,0 +1,12 @@
+﻿@model CandyStore.Models.Order
+
+@{
+    ViewBag.Title = "Checkout";
+}
+
+<h2>Checkout for your order: </h2>
+
+<p>Name on Order: @Model.OrderName</p>
+<p>Candy Ordered: @Model.CandySize</p>
+<p>Ordered Total: $@Model.OrderTotal</p>
+
