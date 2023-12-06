@@ -20,17 +20,18 @@ namespace Cumulative_1_N01627546.Controllers
         {
             TeacherDataController controller = new TeacherDataController();
             IEnumerable<Teacher> Teachers = controller.ListTeachers(SearchKey);
+
             return View(Teachers);
         }
 
-        //GET : /Author/Show/{id}
+        //GET : /Teacher/Show/{id}
         public ActionResult Show(int id)
         {
             TeacherDataController controller = new TeacherDataController();
-            Teacher NewAuthor = controller.FindTeacher(id);
+            Teacher NewTeacher = controller.FindTeacher(id);
 
 
-            return View(NewAuthor);
+            return View(NewTeacher);
         }
     }
 }
