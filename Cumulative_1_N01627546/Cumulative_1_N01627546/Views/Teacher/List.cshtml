@@ -1,19 +1,27 @@
 ﻿@model IEnumerable<Cumulative_1_N01627546.Models.Teacher>
 @{
-    ViewBag.Title = "List";
+    ViewBag.Title = "List of Teachers";
 }
 
-<div id="containerlist">
-    <h2>List of Teachers</h2>
-    <form action="/Teacher/List" method="GET">
-        <input type="text" name="SearchKey" autocomplete="off" />
-        <input type="submit" value="Search" />
+
+
+<h2>List of Teachers</h2>
+
+<div class="d-flex align-items-center mt-5">
+    <form class="d-flex align-items-center ms-auto" method="GET" action="/Teacher/List">
+        <input class="form-control-sm" name="searchKey" autocomplete="off" style="min-width: 550px; margin-right: 1em" type="search" placeholder="Search teachers" aria-label="Search">
+        <button class="btn btn-lg btn-outline-primary my-3 my-sm-0" type="submit">Search</button>
     </form>
-    @foreach (var teacher in Model)
-    {
-        <div class="listitem row">
-            <div class="col-md-12"><a href="/Teacher/Show/@teacher.TeacherId">@teacher.TeacherFName @teacher.TeacherLName</a></div>
-        </div>
-    }
+</div>
+<div class="card mt-5">
+    <div class="list-group list-group-numbered">
+        @foreach (var teacher in Model)
+        {
+            <a href="/Teacher/TeacherInfo/@teacher.TeacherId" class="list-group-item mt-3">
+                @teacher.TeacherFName @teacher.TeacherLName
+            </a>
+
+        }
+    </div>
 </div>
 

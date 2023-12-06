@@ -14,13 +14,13 @@ namespace Cumulative_1_N01627546.Controllers
     {
         private SchoolDbContext School = new SchoolDbContext();
 
-        //This Controller Will access the authors table of our blog database.
+        //This Controller Will access the teachers table of our school database.
         /// <summary>
-        /// Returns a list of Authors in the system
+        /// Returns a list of teachers in the system
         /// </summary>
-        /// <example>GET api/AuthorData/ListAuthors</example>
+        /// <example>GET api/TeacherData/ListTeachers</example>
         /// <returns>
-        /// A list of authors (first names and last names)
+        /// A list of teachers (first names and last names)
         /// </returns>
         [HttpGet]
         [Route("api/TeacherData/ListTeachers/{SearchKey?}")]
@@ -45,7 +45,7 @@ namespace Cumulative_1_N01627546.Controllers
             //Gather Result Set of Query into a variable
             MySqlDataReader ResultSet = cmd.ExecuteReader();
 
-            //Create an empty list of Authors
+            //Create an empty list of Teachers
             List<Teacher> Teachers = new List<Teacher> { };
 
             //Loop Through Each Row the Result Set
@@ -82,11 +82,13 @@ namespace Cumulative_1_N01627546.Controllers
 
 
         /// <summary>
-        /// Finds an author in the system given an ID
+        /// Finds an teacher in the system given an ID
         /// </summary>
-        /// <param name="id">The author primary key</param>
-        /// <returns>An author object</returns>
+        /// <param name="id">The teacher primary key</param>
+        /// <returns>An teacher object</returns>
         [HttpGet]
+        [Route("api/findTeacher/{id}")]
+
         public Teacher FindTeacher(int id)
         {
             Teacher NewTeacher = new Teacher();

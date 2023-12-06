@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "StudentInfo";
+}
+
+<a href="/Student/List">Go Back</a>
+<div class="card mt-5 w-75">
+    <div class="card-body">
+        <h4 class="card-title">@Model.firstName @Model.lastName</h4>
+        <h5 class="card-subtitle mb-3 text-muted"> Student number @Model.studentNumber enrolled on @Model.enrolDate</h5>
+    </div>
+</div>
+

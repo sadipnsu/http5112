@@ -24,8 +24,8 @@ namespace Cumulative_1_N01627546.Controllers
             return View(Teachers);
         }
 
-        //GET : /Teacher/Show/{id}
-        public ActionResult Show(int id)
+        //GET : /Teacher/TeacherInfo/{id}
+        public ActionResult TeacherInfo(int id)
         {
             TeacherDataController controller = new TeacherDataController();
             Teacher NewTeacher = controller.FindTeacher(id);

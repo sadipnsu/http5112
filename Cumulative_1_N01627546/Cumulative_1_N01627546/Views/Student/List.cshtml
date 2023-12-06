@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "List of Students";
+}
+
+<h2>List of Students</h2>
+
+<form class="d-flex align-items-center mt-5" method="GET" action="/Student/List">
+    <input class="form-control-sm" name="searchKey" autocomplete="off" style="min-width: 550px; margin-right: 1em" type="search" placeholder="Search students" aria-label="Search">
+    <button class="btn btn-lg btn-outline-primary my-3 my-sm-0" type="submit">Search</button>
+</form>
+<div class="card mt-5">
+    <div class="list-group list-group-numbered">
+        @foreach (var student in Model)
+        {
+            <a href="/Student/StudentInfo/@student.id" class="list-group-item mt-2">
+                @student.firstName @student.lastName</a>
+        }
+    </div>
+</div>
+
