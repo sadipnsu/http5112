@@ -87,7 +87,7 @@ namespace Cumulative_1_N01627546.Controllers
         /// <param name="id">The teacher primary key</param>
         /// <returns>An teacher object</returns>
         [HttpGet]
-        [Route("api/findTeacher/{id}")]
+        [Route("api/FindTeacher/{id}")]
 
         public Teacher FindTeacher(int id)
         {
