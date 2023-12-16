@@ -1,0 +1,23 @@
+﻿@model Cumulative_3_N01627546.Models.Teacher
+@{
+    ViewBag.Title = "Show";
+}
+
+<h3>Show</h3>
+<a href="/Teacher/List"> Go Back To List </a>
+<div class="card mt-4 w-75">
+    <div class="card-body">
+        <h5 class="card-title">@Model.TeacherFName @Model.TeacherLName</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Employee number: @Model.EmployeeNumber</h6>
+        <hr />
+        <p class="card-text">
+            @Model.TeacherFName was hired on @Model.HireDate . The Salary for the teacher is $@Model.Salary
+        </p>
+    </div>
+</div>
+
+<div class="mt-5">
+    <a href="/Teacher/DeleteConfirm/@Model.TeacherId" class="btn btn-sm btn-danger">Delete</a>
+    <a class="btn btn-outline-info" href="/Teacher/Update/@Model.TeacherId">Update</a>
+</div>
+
